@@ -13,9 +13,9 @@ final class CatchDefaultData
     {
         $data = [];
 
-        $data["server"] = $_SERVER['SERVER_ADDR'];
-        $data["root_path"] = $_SERVER['DOCUMENT_ROOT'];
-        $data["host"] = $_SERVER['HTTP_HOST'];
+        $data["server"] = $_SERVER['SERVER_ADDR']  ?? null;
+        $data["root_path"] = $_SERVER['DOCUMENT_ROOT']  ?? null;
+        $data["host"] = $_SERVER['HTTP_HOST']  ?? null;
 
         $data["app_name"] = self::getEnvironment("APP_NAME");
         $data["app_installation"] = self::getEnvironment("APP_INSTALLATION_ID");
