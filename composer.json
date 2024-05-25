@@ -1,8 +1,8 @@
 {
-    "name": "medboubazine/laravel-report-tool",
+    "name": "medboubazine/report-tool",
     "type": "library",
-    "description": "DzairGame installation tool",
-    "keywords": ["php","laravel","laravel-report-tool"],
+    "description": "Projects report tool",
+    "keywords": ["php","report-tool"],
     "license": "MIT",
     "authors": [
         {
@@ -13,22 +13,18 @@
     ],
     "require": {
         "php": "^8.1",
-        "illuminate/support": "^10"
+        "guzzlehttp/guzzle": "^7.8"
     },
     "autoload": {
         "psr-4": {
-            "Medboubazine\\LaravelReportTool\\": "src/"
-        }
+            "Medboubazine\\ReportTool\\": "src/"
+        },
+        "files": [
+            "src/bootstrap.php"
+        ]
     },
     "require-dev": {
         "symfony/var-dumper": "^6.2",
         "spatie/ignition": "^1.14"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Medboubazine\\LaravelReportTool\\ServiceProvider"
-            ]
-        }
     }
 }
